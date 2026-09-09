@@ -8,14 +8,16 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "bun --filter '*' dev",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"frontend,backend\" -c \"cyan.bold,yellow.bold\" \"bun --filter frontend dev\" \"bun --filter @belanjayuk/backend dev\"",
+    "dev:frontend": "bun --filter frontend dev",
+    "dev:backend": "bun --filter @belanjayuk/backend dev",
     "build": "bun --filter '*' build",
     "lint": "bun --filter '*' lint",
     "typecheck": "bun --filter '*' typecheck"
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
+    "concurrently": "^9.1.2",
     "typescript": "^5.7.3"
   }
 }
-

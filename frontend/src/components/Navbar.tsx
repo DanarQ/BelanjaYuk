@@ -36,11 +36,11 @@ export default function Navbar({
             name="q"
             type="search"
             placeholder="Cari produk, kategori, atau toko di BelanjaYuk..."
-            className="w-full pl-5 pr-24 py-2.5 sm:py-3 bg-gray-50 focus:bg-white text-sm sm:text-base rounded-xl border-2 border-emerald-600/30 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all shadow-xs"
+            className="w-full pl-5 pr-24 py-2.5 sm:py-3 bg-gray-50 focus:bg-white text-sm font-normal placeholder:text-slate-400 placeholder:font-normal rounded-xl border-2 border-emerald-600/30 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all shadow-xs"
           />
           <button
             type="submit"
-            className="absolute right-1.5 px-5 sm:px-6 py-1.5 sm:py-2 bg-emerald-600 hover:bg-emerald-700 active:scale-98 text-white text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center gap-1.5 shadow-xs"
+            className="absolute right-1.5 px-5 sm:px-6 py-1.5 sm:py-2 bg-emerald-600 hover:bg-emerald-700 active:scale-98 text-white text-sm font-semibold rounded-lg transition-all flex items-center gap-1.5 shadow-xs"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -80,13 +80,13 @@ export default function Navbar({
           {/* Auth */}
           <a
             href="#login"
-            className="px-3.5 py-2 text-sm font-semibold text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-xl transition-colors"
+            className="px-3.5 py-2 text-sm font-medium hover:font-semibold text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-xl transition-all leading-5"
           >
             Masuk
           </a>
           <a
             href="#daftar"
-            className="px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-98 rounded-xl shadow-xs transition-all"
+            className="px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-98 rounded-xl shadow-xs transition-all leading-5"
           >
             Daftar
           </a>
@@ -98,7 +98,7 @@ export default function Navbar({
 
 function Badge({ count, color }: { count: number; color: string }) {
   return (
-    <span className={`absolute top-1 right-1 min-w-4 h-4 px-1 text-[10px] font-bold text-white ${color} rounded-full flex items-center justify-center`}>
+    <span className={`absolute top-1 right-1 min-w-[18px] h-[18px] px-1 text-[11px] font-semibold text-white ${color} rounded-full flex items-center justify-center border-2 border-white`}>
       {count > 99 ? '99+' : count}
     </span>
   )

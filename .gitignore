@@ -9,6 +9,7 @@ out/
 .output/
 .turbo/
 .cache/
+*.tsbuildinfo
 
 # Environment files
 .env
