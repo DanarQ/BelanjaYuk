@@ -2,6 +2,7 @@ import Navbar from './components/layout/Navbar'
 import CategoryNavbar from './components/layout/CategoryNavbar'
 import HeroSection from './components/home/HeroSection'
 import CategorySection from './components/home/CategorySection'
+import FlashSaleSection from './components/home/FlashSaleSection'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main>
         <HeroSection />
         <CategorySection />
+        <FlashSaleSection />
       </main>
     </div>
   )
