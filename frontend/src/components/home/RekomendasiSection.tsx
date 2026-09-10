@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { useState } from 'react'
 import { recommendations } from '../../data/recommendations'
 
@@ -27,7 +28,7 @@ export default function RekomendasiSection() {
                 {discount > 0 && <span className="absolute right-0 top-0 bg-orange-100 px-2 py-1 text-xs font-semibold text-orange-700">-{discount}%</span>}
               </div>
               <div className="p-2.5">
-                <h3 className="line-clamp-2 min-h-10 text-sm leading-5 text-slate-700">{product.name}</h3>
+                <h3 className="line-clamp-2 min-h-10 text-sm leading-5 text-slate-700"><Link to={`/produk/${product.id}`} className="hover:text-emerald-700 hover:underline">{product.name}</Link></h3>
                 <div className="mt-2 flex min-h-5 items-center">
                   {discount > 0 && <span className="border border-orange-200 px-1 text-[10px] leading-4 text-orange-700">Hemat {rupiah.format(product.originalPrice - product.price)}</span>}
                 </div>

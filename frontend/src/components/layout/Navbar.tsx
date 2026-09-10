@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router'
 interface NavbarProps {
   cartCount?: number
   wishlistCount?: number
@@ -9,23 +10,26 @@ export default function Navbar({
   wishlistCount = 0,
   onSearch,
 }: NavbarProps) {
+  const navigate = useNavigate()
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const query = new FormData(e.currentTarget).get('q') as string
-    onSearch?.(query?.trim() || '')
+    const search = query?.trim() || ''
+    onSearch?.(search)
+    navigate(search ? '/produk?' + new URLSearchParams({ q: search }) : '/produk')
   }
 
   return (
     <nav aria-label="Navigasi utama" className="bg-transparent text-white">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 lg:py-3 flex flex-wrap items-center justify-between gap-x-2 gap-y-2 lg:gap-x-5">
         {/* Logo */}
-        <a href="/" className="flex items-center shrink-0">
+        <Link to="/" className="flex items-center shrink-0">
           <img
             src="/belanjayuk-logo.svg"
             alt="BelanjaYuk"
             className="h-6 sm:h-8 lg:h-9 w-auto object-contain brightness-0 invert"
           />
-        </a>
+        </Link>
 
         {/* Search */}
         <form
@@ -52,8 +56,8 @@ export default function Navbar({
         {/* Actions */}
         <div className="flex items-center gap-0.5 sm:gap-2 shrink-0">
           {/* Wishlist */}
-          <a
-            href="#wishlist"
+          <Link
+            to="/wishlist"
             className="relative p-2 text-white hover:bg-white/10 rounded transition-colors"
             title="Wishlist"
           >
@@ -61,11 +65,11 @@ export default function Navbar({
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
             {wishlistCount > 0 && <Badge count={wishlistCount} color="bg-rose-500" />}
-          </a>
+          </Link>
 
           {/* Cart */}
-          <a
-            href="#cart"
+          <Link
+            to="/keranjang"
             className="relative p-2 text-white hover:bg-white/10 rounded transition-colors"
             title="Keranjang"
           >
@@ -73,23 +77,23 @@ export default function Navbar({
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
             {cartCount > 0 && <Badge count={cartCount} color="bg-emerald-600" />}
-          </a>
+          </Link>
 
 
 
           {/* Auth */}
-          <a
-            href="#login"
+          <Link
+            to="/masuk"
             className="px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-white hover:bg-white/10 rounded transition-colors leading-5"
           >
             Masuk
-          </a>
-          <a
-            href="#daftar"
+          </Link>
+          <Link
+            to="/daftar"
             className="px-2.5 sm:px-3.5 py-2 text-xs sm:text-sm font-semibold text-emerald-800 bg-white hover:bg-emerald-50  rounded  transition-colors leading-5"
           >
             Daftar
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

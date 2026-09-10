@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 const categoryGroups = [
   { title: 'Elektronik', items: ['Handphone & Tablet', 'Komputer & Laptop', 'Aksesori Gadget', 'Audio & Musik', 'Gaming & Konsol'] },
   { title: 'Fashion', items: ['Fashion Pria', 'Fashion Wanita', 'Fashion Muslim', 'Sepatu & Sandal', 'Tas & Dompet'] },
@@ -10,10 +11,10 @@ const categoryGroups = [
 ]
 
 const shoppingLinks = [
-  { label: 'Semua Kategori', href: '#kategori' },
-  { label: 'Flash Sale', href: '#flash-sale' },
-  { label: 'Produk Terlaris', href: '#produk-terlaris' },
-  { label: 'Rekomendasi Hari Ini', href: '#rekomendasi' },
+  { label: 'Semua Kategori', href: '/#kategori' },
+  { label: 'Flash Sale', href: '/#flash-sale' },
+  { label: 'Produk Terlaris', href: '/#produk-terlaris' },
+  { label: 'Rekomendasi Hari Ini', href: '/#rekomendasi' },
 ]
 
 const helpTopics = [
@@ -28,9 +29,9 @@ export default function FooterSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-x-8 gap-y-8 py-8 lg:grid-cols-[1.3fr_1fr_1.2fr_1fr] lg:gap-x-12 lg:py-10">
           <div className="col-span-2 lg:col-span-1">
-            <a href="#beranda" aria-label="BelanjaYuk, kembali ke atas" className="inline-block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
+            <Link to="/#beranda" aria-label="BelanjaYuk, kembali ke atas" className="inline-block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-600">
               <img src="/belanjayuk-logo.svg" alt="BelanjaYuk" width={150} height={40} loading="lazy" className="h-9 w-auto" />
-            </a>
+            </Link>
             <p className="mt-3 text-sm font-medium text-slate-700">Lebih dekat, lebih baik.</p>
             <p className="mt-2 max-w-60 text-xs leading-5 text-slate-500">Pilihan belanja untuk rumah, keluarga, dan kebutuhan sehari-hari.</p>
           </div>
@@ -40,7 +41,7 @@ export default function FooterSection() {
             <ul className="mt-3 space-y-1">
               {shoppingLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="inline-block py-1.5 text-xs hover:text-emerald-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">{link.label}</a>
+                  <Link to={link.href} className="inline-block py-1.5 text-xs hover:text-emerald-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -90,7 +91,7 @@ export default function FooterSection() {
             <p>© {new Date().getFullYear()} BelanjaYuk. Hak cipta dilindungi.</p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
               <span>Indonesia · Bahasa Indonesia</span>
-              <a href="#beranda" className="py-1 hover:text-emerald-700 focus-visible:outline-2 focus-visible:outline-emerald-600">Kembali ke atas ↑</a>
+              <Link to="/#beranda" className="py-1 hover:text-emerald-700 focus-visible:outline-2 focus-visible:outline-emerald-600">Kembali ke atas ↑</Link>
             </div>
           </div>
           <p className="mt-2 text-slate-400">Pratinjau BelanjaYuk menggunakan data produk dan promo contoh.</p>
