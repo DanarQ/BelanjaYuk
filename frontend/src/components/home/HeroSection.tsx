@@ -2,34 +2,34 @@ export default function HeroSection() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
       {/* Container utama: flex col di mobile, flex row di desktop */}
-      <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 items-stretch lg:h-[360px] xl:h-[380px]">
+      <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 items-stretch lg:h-[320px] xl:h-[340px]">
         
         {/* Kiri: Banner Utama Ramadan (~70% lebar desktop) */}
-        <div className="relative flex-1 w-full overflow-hidden rounded-2xl shadow-xs min-h-[300px] lg:min-h-0 bg-[#DCE7DF]">
+        <div className="relative flex-1 w-full overflow-hidden rounded-md  min-h-[280px] lg:min-h-0 bg-[#DCE7DF]">
           {/* Background Image */}
           <img
             src="/FrontHero.png"
             alt="Ramadan Lebih Bermakna — BelanjaYuk"
-            className="absolute inset-0 w-full h-full object-cover object-right"
+            className="block h-auto w-full lg:absolute lg:inset-0 lg:h-full lg:object-contain lg:object-right"
           />
           {/* Latar pekat di area teks, memudar menuju gambar produk */}
-          <div aria-hidden="true" className="absolute inset-0 bg-linear-to-r from-[#eaf2ec] from-0% via-[#eaf2ec]/95 via-40% to-transparent to-80% pointer-events-none" />
+          <div aria-hidden="true" className="absolute inset-0 hidden bg-linear-to-r from-[#eaf2ec] from-0% via-[#eaf2ec]/95 via-40% to-transparent to-80% pointer-events-none lg:block" />
 
           {/* Text Content Overlay */}
-          <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-md">
+          <div className="relative z-10 flex flex-col justify-center p-6 sm:p-8 lg:h-full lg:p-8 lg:max-w-[48%]">
             <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-slate-600 uppercase">
-              Hidup Lebih Baik Awali Dari Rumah
+              Pilihan Ramadan
             </p>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-emerald-950 leading-tight mt-3">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-emerald-950 leading-tight mt-3">
               <span className="text-emerald-600">Ramadan</span><br />Lebih Bermakna
             </h1>
             <p className="max-w-[32ch] text-xs sm:text-sm text-emerald-950 mt-2.5 leading-relaxed font-medium">
-              Temukan kebutuhan terbaik untuk menyambut bulan suci dengan penawaran spesial hanya di Belanjayuk.
+              Lengkapi kebutuhan rumah dan keluarga dengan harga spesial Ramadan.
             </p>
             <div className="mt-5">
               <a
-                href="#belanja"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF5F00] hover:bg-[#EA5500] active:scale-98 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-xs transition-all"
+                href="#produk-terlaris"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF5F00] hover:bg-[#EA5500]  text-white text-xs sm:text-sm font-semibold rounded-md  transition-colors"
               >
                 <span>Belanja Sekarang</span>
                 <span className="text-base leading-none">→</span>
@@ -42,7 +42,7 @@ export default function HeroSection() {
         <div className="w-full lg:w-[31%] xl:w-[30%] shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4 justify-between">
           
           {/* Banner 1: Gratis Ongkir (Truk) */}
-          <div className="relative flex-1 overflow-hidden rounded-2xl shadow-xs min-h-[155px] sm:min-h-[170px] bg-[#FED7AA]">
+          <div className="relative flex-1 overflow-hidden rounded-md  min-h-[155px] sm:min-h-[150px] bg-[#FED7AA]">
             {/* Background Image: Truk di sebelah kanan */}
             <img
               src="/FrontHeroTruck.png"
@@ -67,8 +67,8 @@ export default function HeroSection() {
               </div>
               <div className="pt-2">
                 <a
-                  href="#promo"
-                  className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/95 hover:bg-white text-[#EA580C] text-xs font-semibold rounded-lg shadow-xs transition-all hover:gap-1.5"
+                  href="#flash-sale"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/95 hover:bg-white text-[#EA580C] text-xs font-semibold rounded-lg  transition-colors "
                 >
                   <span>Lihat Promo</span>
                   <span className="text-xs leading-none">→</span>
@@ -78,7 +78,7 @@ export default function HeroSection() {
           </div>
 
           {/* Banner 2: Produk Lokal (Tas) */}
-          <div className="relative flex-1 overflow-hidden rounded-2xl shadow-xs min-h-[155px] sm:min-h-[170px] bg-[#D1FAE5]">
+          <div className="relative flex-1 overflow-hidden rounded-md  min-h-[155px] sm:min-h-[150px] bg-[#D1FAE5]">
             {/* Background Image: Tas & Tanaman di sebelah kanan */}
             <img
               src="/FrontHeroTas.png"
@@ -103,8 +103,8 @@ export default function HeroSection() {
               </div>
               <div className="pt-2">
                 <a
-                  href="#produk-lokal"
-                  className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/95 hover:bg-white text-emerald-900 text-xs font-semibold rounded-lg shadow-xs transition-all hover:gap-1.5"
+                  href="#produk-terlaris"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 bg-white/95 hover:bg-white text-emerald-900 text-xs font-semibold rounded-lg  transition-colors "
                 >
                   <span>Lihat Koleksi</span>
                   <span className="text-xs leading-none">→</span>

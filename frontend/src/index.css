@@ -11,6 +11,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  section[id] {
+    scroll-margin-top: 13rem;
+  }
+
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 8rem;
+    }
+  }
+}
+
+#flash-sale-products,
+[aria-label="Filter kategori produk terlaris"] {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
 }
 
 /* ========================================

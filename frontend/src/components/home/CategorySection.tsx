@@ -41,7 +41,7 @@ export default function CategorySection({ onCategorySelect }: CategorySectionPro
   )
 
   return (
-    <section aria-labelledby="category-heading" className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-5 lg:px-8">
+    <section aria-labelledby="category-heading" className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
       <div className="bg-white">
         <div className="flex min-h-14 items-center justify-between gap-3 px-5">
           <h2 id="category-heading" className="text-sm font-medium uppercase tracking-wide text-slate-500 sm:text-base">Semua Kategori</h2>
