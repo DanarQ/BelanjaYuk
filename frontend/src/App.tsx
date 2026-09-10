@@ -4,10 +4,11 @@ import CategorySection from './components/home/CategorySection'
 import FlashSaleSection from './components/home/FlashSaleSection'
 import ProdukTerlarisSection from './components/home/ProdukTerlarisSection'
 import RekomendasiSection from './components/home/RekomendasiSection'
+import FooterSection from './components/home/FooterSection'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div id="beranda" className="min-h-screen bg-gray-50">
       <Header />
       <main>
         <HeroSection />
@@ -16,6 +17,7 @@ function App() {
         <ProdukTerlarisSection />
         <RekomendasiSection />
       </main>
+      <FooterSection />
     </div>
   )
 }
