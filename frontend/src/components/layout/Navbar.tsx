@@ -16,14 +16,14 @@ export default function Navbar({
   }
 
   return (
-    <nav aria-label="Navigasi utama" className="bg-white border-b border-gray-100">
+    <nav aria-label="Navigasi utama" className="bg-transparent text-white">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 lg:py-3 flex flex-wrap items-center justify-between gap-x-2 gap-y-2 lg:gap-x-5">
         {/* Logo */}
         <a href="/" className="flex items-center shrink-0">
           <img
             src="/belanjayuk-logo.svg"
             alt="BelanjaYuk"
-            className="h-6 sm:h-8 lg:h-9 w-auto object-contain"
+            className="h-6 sm:h-8 lg:h-9 w-auto object-contain brightness-0 invert"
           />
         </a>
 
@@ -36,7 +36,7 @@ export default function Navbar({
             name="q"
             type="search"
             placeholder="Cari produk di BelanjaYuk"
-            className="w-full h-10 pl-3 pr-20 bg-gray-50 focus:bg-white text-sm font-normal placeholder:text-slate-400 placeholder:font-normal rounded border border-emerald-600/30 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/10 outline-none transition-colors "
+            className="w-full h-10 pl-3 pr-20 bg-white text-slate-800 text-sm font-normal placeholder:text-slate-400 placeholder:font-normal rounded border-0 focus:ring-2 focus:ring-emerald-200 outline-none transition-colors "
           />
           <button
             type="submit"
@@ -54,7 +54,7 @@ export default function Navbar({
           {/* Wishlist */}
           <a
             href="#wishlist"
-            className="relative p-2 text-gray-600 hover:text-rose-600 hover:bg-rose-50/50 rounded transition-colors"
+            className="relative p-2 text-white hover:bg-white/10 rounded transition-colors"
             title="Wishlist"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -66,7 +66,7 @@ export default function Navbar({
           {/* Cart */}
           <a
             href="#cart"
-            className="relative p-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/50 rounded transition-colors"
+            className="relative p-2 text-white hover:bg-white/10 rounded transition-colors"
             title="Keranjang"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -75,18 +75,18 @@ export default function Navbar({
             {cartCount > 0 && <Badge count={cartCount} color="bg-emerald-600" />}
           </a>
 
-          <div className="h-6 w-px bg-gray-200 mx-1 hidden sm:block" />
+
 
           {/* Auth */}
           <a
             href="#login"
-            className="px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 rounded transition-colors leading-5"
+            className="px-2 sm:px-3 py-2 text-xs sm:text-sm font-medium text-white hover:bg-white/10 rounded transition-colors leading-5"
           >
             Masuk
           </a>
           <a
             href="#daftar"
-            className="px-2.5 sm:px-3.5 py-2 text-xs sm:text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700  rounded  transition-colors leading-5"
+            className="px-2.5 sm:px-3.5 py-2 text-xs sm:text-sm font-semibold text-emerald-800 bg-white hover:bg-emerald-50  rounded  transition-colors leading-5"
           >
             Daftar
           </a>
