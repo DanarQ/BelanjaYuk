@@ -17,11 +17,11 @@ export default function HeroSection() {
 
           {/* Text Content Overlay */}
           <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-md">
-            <p className="text-[11px] sm:text-xs font-bold tracking-widest text-slate-600 uppercase">
+            <p className="text-[11px] sm:text-xs font-semibold tracking-wide text-slate-600 uppercase">
               Hidup Lebih Baik Awali Dari Rumah
             </p>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-emerald-950 leading-tight mt-1.5">
-              Ramadan<br />Lebih Bermakna
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-emerald-950 leading-tight mt-3">
+              <span className="text-emerald-600">Ramadan</span><br />Lebih Bermakna
             </h1>
             <p className="max-w-[32ch] text-xs sm:text-sm text-emerald-950 mt-2.5 leading-relaxed font-medium">
               Temukan kebutuhan terbaik untuk menyambut bulan suci dengan penawaran spesial hanya di Belanjayuk.
@@ -55,13 +55,13 @@ export default function HeroSection() {
             {/* Text Overlay */}
             <div className="relative z-10 h-full flex flex-col justify-between p-4 sm:p-5 max-w-[65%]">
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#EA580C] leading-tight">
+                <h3 className="text-lg sm:text-xl font-bold tracking-tight text-[#EA580C] leading-tight">
                   Gratis Ongkir
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                <p className="mt-1 text-xs sm:text-sm font-medium text-slate-800 leading-snug">
                   ke Seluruh Indonesia
                 </p>
-                <p className="max-w-[22ch] text-xs text-amber-950 leading-relaxed font-medium mt-0.5">
+                <p className="max-w-[22ch] text-xs text-amber-950 leading-relaxed font-normal mt-2">
                   Min. belanja Rp100.000
                 </p>
               </div>
@@ -91,14 +91,14 @@ export default function HeroSection() {
             {/* Text Overlay */}
             <div className="relative z-10 h-full flex flex-col justify-between p-4 sm:p-5 max-w-[65%]">
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-emerald-900 leading-tight">
+                <h3 className="text-lg sm:text-xl font-bold tracking-tight text-emerald-900 leading-tight">
                   Produk Lokal
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-emerald-950 leading-snug">
+                <p className="mt-1 text-xs sm:text-sm font-medium text-emerald-950 leading-snug">
                   Pilihan Terbaik
                 </p>
-                <p className="max-w-[22ch] text-xs text-emerald-950 leading-relaxed font-medium mt-0.5">
-                  Dukung UMKM, Dukung Indonesia
+                <p className="max-w-[22ch] text-xs text-emerald-950 leading-relaxed font-medium mt-2">
+                  Dukung UMKM,<br /> Dukung Indonesia
                 </p>
               </div>
               <div className="pt-2">

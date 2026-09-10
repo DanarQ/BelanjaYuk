@@ -1,6 +1,7 @@
 import Navbar from './components/layout/Navbar'
 import CategoryNavbar from './components/layout/CategoryNavbar'
 import HeroSection from './components/home/HeroSection'
+import CategorySection from './components/home/CategorySection'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <CategoryNavbar />
       <main>
         <HeroSection />
+        <CategorySection />
       </main>
     </div>
   )

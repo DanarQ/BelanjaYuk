@@ -1,46 +1,4 @@
-const categories = [
-  'Elektronik', 'Fashion', 'Rumah & Dapur', 'Ibu & Anak', 'Olahraga',
-  'Hobi & Gaya Hidup', 'Makanan & Minuman', 'Produk Lokal', 'Promo',
-]
-
-const allCategories = [
-  ...categories.filter((category) => category !== 'Promo'),
-  'Handphone & Tablet',
-  'Komputer & Laptop',
-  'Aksesori Gadget',
-  'Kamera & Fotografi',
-  'Audio & Musik',
-  'Gaming & Konsol',
-  'Fashion Pria',
-  'Fashion Wanita',
-  'Fashion Anak',
-  'Fashion Muslim',
-  'Sepatu & Sandal',
-  'Tas & Dompet',
-  'Jam Tangan & Perhiasan',
-  'Kecantikan & Perawatan Diri',
-  'Kesehatan',
-  'Perlengkapan Bayi',
-  'Mainan Anak',
-  'Peralatan Dapur',
-  'Peralatan Rumah Tangga',
-  'Furnitur & Dekorasi',
-  'Kebersihan Rumah',
-  'Pertukangan & Perkakas',
-  'Taman & Tanaman',
-  'Otomotif',
-  'Sepeda & Aksesori',
-  'Outdoor & Camping',
-  'Buku & Alat Tulis',
-  'Perlengkapan Kantor',
-  'Kerajinan & Koleksi',
-  'Perlengkapan Hewan Peliharaan',
-  'Sembako & Bahan Masakan',
-  'Makanan Ringan',
-  'Kopi & Teh',
-  'Produk Digital',
-  'Promo',
-]
+import { categories, allCategories } from '../../data/categories'
 
 interface CategoryNavbarProps {
   location?: string
