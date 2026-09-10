@@ -49,8 +49,8 @@ interface CategoryNavbarProps {
 
 export default function CategoryNavbar({ location = 'Pontianak', onCategorySelect }: CategoryNavbarProps) {
   const categoryStyle = (category: string) => category === 'Promo'
-    ? 'font-semibold text-rose-600 hover:text-rose-700'
-    : 'text-slate-600 hover:text-emerald-600'
+    ? 'font-semibold text-orange-600 hover:text-rose-700 cursor-pointer'
+    : 'text-slate-600 hover:text-emerald-600 cursor-pointer'
 
   return (
     <nav aria-label="Kategori produk" className="border-b border-gray-100 bg-white">
