@@ -1,5 +1,5 @@
-import Navbar from './components/Navbar'
-import CategoryNavbar from './components/CategoryNavbar'
+import Navbar from './components/layout/Navbar'
+import CategoryNavbar from './components/layout/CategoryNavbar'
 
 function App() {
   return (
