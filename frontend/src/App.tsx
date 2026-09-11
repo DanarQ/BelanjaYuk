@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import CatalogPage from './pages/CatalogPage'
 import ProductPage from './pages/ProductPage'
 import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 import StatusPage from './pages/StatusPage'
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
         <Route path="keranjang" element={<StatusPage title="Keranjang" description="Fitur keranjang belum tersedia." />} />
         <Route path="wishlist" element={<StatusPage title="Wishlist" description="Fitur menyimpan produk favorit belum tersedia." />} />
         <Route path="masuk" element={<LoginPage />} />
-        <Route path="daftar" element={<StatusPage title="Daftar" description="Pendaftaran akun belum tersedia." />} />
+        <Route path="daftar" element={<RegisterPage />} />
         <Route path="*" element={<StatusPage title="Halaman tidak ditemukan" description="Periksa alamat halaman atau kembali ke beranda." />} />
       </Route>
     </Routes>
